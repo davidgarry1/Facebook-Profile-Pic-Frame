@@ -1,0 +1,50 @@
+<html>
+
+<head>
+
+<link rel="icon" href="http://www-scf.usc.edu/~dgarry/sp.png">
+<title>No More Fakes</title>
+
+<style>
+.imageWrapper {
+  position: relative;
+}
+.overlayImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+</style>
+
+<script>
+
+var func = function(){
+ var url = document.getElementsByClassName("imageURL1")[0].value;
+ document.getElementById('ov2').setAttribute('src',url);
+ document.getElementById('ov2').setAttribute('width',600);
+ document.getElementById('ov2').setAttribute('height',600);
+}
+
+</script>
+
+
+</head>
+
+
+    
+    <body>
+        Enter your facebook profile pic url: <input type="text" class="imageURL1"></input>
+        <button onclick="func()">Load</button><br>Then screenshot it cause I don't feel like making a download button.
+        <div class="imageWrapper">
+  			<img id="ov2" width ="600" height="600" class="overlayImage" src="">
+  			<img  id="ov1" width ="600" height="600"  class="overlayImage" src="http://www-scf.usc.edu/~dgarry/nobody_cares.png">
+		</div><br><br><br><br><br><br>
+		<canvas id="canvas"></canvas>
+		
+    </body>
+
+
+
+
+
+</html>
