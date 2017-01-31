@@ -20,7 +20,20 @@ var func = function(){
  document.getElementById('ov2').setAttribute('width',600);
  document.getElementById('ov2').setAttribute('height',600);
 }
+$(function() { 
+    $("#btnSave").click(function() { 
+        html2canvas($("#widget"), {
+            onrendered: function(canvas) {
+                theCanvas = canvas;
+                canvas.toBlob(function(blob) {
+                    saveAs(blob, "RachelRebecca2017.png"); 
+                });
+            }
+        });
+    });
+});
 </script>
+	
 </head>
 <body>
         Enter your facebook profile pic url: <input type="text" class="imageURL1"></input>
@@ -29,7 +42,8 @@ var func = function(){
   			<img id="ov2" width ="600" height="600" class="overlayImage" src="">
   			<img  id="ov1" width ="600" height="600"  class="overlayImage" src="https://github.com/davidgarry1/Facebook-Profile-Pic-Frame/blob/master/img/rr.png?raw=true">
 		</div><br><br><br><br><br><br>
-		<canvas id="canvas"></canvas>
+		<canvas id="canvas"></canvas><br>
+	<button id="#btnSave">Save</button>
 		
 </body>
 </html>
