@@ -15,7 +15,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="FileSaver.js"></script>
 	<script src="html2canvas.js"></script>
-	<script src="html2canvas.svg.js"></script>
 <script>
 var func = function(){
  var url = document.getElementsByClassName("imageURL1")[0].value;
@@ -23,6 +22,8 @@ var func = function(){
  document.getElementById('ov2').setAttribute('width',600);
  document.getElementById('ov2').setAttribute('height',600);
 }
+	</script>
+<script>
 $(function() { 
     $("#btnSave").click(function() { 
         html2canvas($("#widget"), {
