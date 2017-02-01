@@ -2,6 +2,9 @@
 <head>
 <link rel="icon" href="img/icon.ico">
 <title>Rachel Rebecca 2017!</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="FileSaver.js"></script>
+	<script src="html2canvas.js"></script>
 <style>
 .imageWrapper {
   position: relative;
@@ -12,9 +15,7 @@
   left: 0;
 }
 </style>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="FileSaver.js"></script>
-	<script src="html2canvas.js"></script>
+	
 <script>
 var func2017 = function(){
  var url = document.getElementsByClassName("imageURL1")[0].value;
@@ -38,7 +39,7 @@ $(function() {
 	
 </head>
 <body>
-        <input type="text" class="imageURL1" placeholder="Enter 4 your Facebook profile pic url.."></input>
+        <input type="text" class="imageURL1" placeholder="Enter_ your Facebook profile pic url.."></input>
         <button onclick="func2017()">Load</button><button id="btnSave">Save</button><br>
 	<div id="widget" class="imageWrapper widget">
   			<img id="ov2" width ="600" height="600" class="overlayImage" src="">
